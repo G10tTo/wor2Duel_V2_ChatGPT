@@ -135,6 +135,27 @@
   .circleCenter {
     font-size: 12px !important;
   }
+
+  .scores {
+    gap: 10px;
+  }
+
+  .score {
+    width: 80px;
+    height: 30px;
+  }
+
+  .controls button {
+    width: 65px;
+    height: 30px;
+    font-size: 12px !important;
+  }
+
+  .results button {
+    width: 100px;
+    height: 30px;
+    font-size: 12px !important;
+  }
 }
   
 
