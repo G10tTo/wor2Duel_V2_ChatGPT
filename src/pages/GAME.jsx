@@ -11,12 +11,19 @@ function App() {
   const [sequence, setSequence] = useState('');
   const [currentPlayer, setCurrentPlayer] = useState(null); // null till the game starts
   const [score, setScore] = useState({ user: 0, ai: 0 });
+  const [isSmallScreen, setIsSmallScreen] = useState(() => window.innerWidth < 535);
   const [rounds, setRounds] = useState([]);
   const [showRules, setShowRules] = useState(false);
   const [showResults, setShowResults] = useState(false);
   const [lastCompletedWord, setLastCompletedWord] = useState(null);
 
   const turnTimer = useRef(null);
+
+  useEffect(() => {
+    const handleResize = () => setIsSmallScreen(window.innerWidth < 535);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const registerRound = async (word, winner) => {
     const valid = await isValidWord(word);
@@ -111,8 +118,7 @@ function App() {
 
       <div className={Gs.circleContainer}>
         <LetterButtons onClick={handleUserInput} disabled={currentPlayer !== 'user'} />
-
-        <div className={Gs.circleCenter}>
+        {isSmallScreen && (
           <div className={Gs.scores}>
             <div className={Gs.score}>
               <p>Player:</p>
@@ -123,6 +129,21 @@ function App() {
               <p>{score.ai}</p>
             </div>
           </div>
+        )}
+
+        <div className={Gs.circleCenter}>
+          {!isSmallScreen && (
+            <div className={Gs.scores}>
+              <div className={Gs.score}>
+                <p>Player:</p>
+                <p>{score.user}</p>
+              </div>
+              <div className={Gs.score}>
+                <p>AI:</p>
+                <p>{score.ai}</p>
+              </div>
+            </div>
+          )}
           {currentPlayer === null ? (
             <p>LET'S PLAY</p>
           ) : (
