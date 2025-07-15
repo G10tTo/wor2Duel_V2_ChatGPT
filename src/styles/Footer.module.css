@@ -1,22 +1,6 @@
 /* Footer Styles */
 footer {
-  background-color: #000000 !important;
-  margin: auto !important;
-
-  bottom: 0 !important;
-  width: 100% !important;
-
-  height: 25px !important;
-  display: flex !important;
-  justify-content: center !important;
-  text-align: center !important;
-  padding: 10px !important;
-
-  z-index: 20 !important;
-  border-top: #3300ff 2px solid !important;
-  box-shadow: 0 -5px 20px rgba(0, 81, 255, 0.7) !important;
-
-  transition: all 0.5s ease !important;
+  
 
 }
 
