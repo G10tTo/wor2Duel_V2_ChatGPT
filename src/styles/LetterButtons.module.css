@@ -50,3 +50,12 @@
   opacity: 0.8;
   cursor: not-allowed;
 }
+
+@media (max-width: 535px) {
+  .letterButtons button {
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 16px;
+  }
+}
