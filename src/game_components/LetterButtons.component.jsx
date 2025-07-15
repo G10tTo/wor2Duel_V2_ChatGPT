@@ -2,9 +2,11 @@ import LBs from '../styles/LetterButtons.module.css';
 
 const LetterButtons = ({ onClick, disabled }) => {
   const alphabet = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
-  const radius = 220;
-  const centerX = 250;
-  const centerY = 250;
+
+  const isSmallScreen = window.innerWidth <= 535;
+  const radius = isSmallScreen ? 130 : 220;
+  const centerX = isSmallScreen ? 150 : 250;
+  const centerY = isSmallScreen ? 150 : 250;
 
   return (
     <div className={LBs.letterButtons}>

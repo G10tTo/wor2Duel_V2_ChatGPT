@@ -120,6 +120,22 @@
   }
   
 }
+
+@media (max-width: 535px) {
+  .App {
+    margin: 20px auto;
+    max-width: 320px;
+  }
+
+  .circleContainer {
+    width: 300px;
+    height: 300px;
+  }
+
+  .circleCenter {
+    font-size: 12px !important;
+  }
+}
   
 
 @media (max-height: 710px) {
