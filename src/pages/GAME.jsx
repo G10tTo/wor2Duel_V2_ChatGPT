@@ -115,6 +115,7 @@ function App() {
 
   return (
     <div className={Gs.App}>
+      {/* D4_T2 ---> */}
       {isSmallScreen && (
         <div className={Gs.scores}>
           <div className={Gs.score}>
@@ -127,10 +128,12 @@ function App() {
           </div>
         </div>
       )}
+      {/* <--- */}
       <div className={Gs.circleContainer}>
         <LetterButtons onClick={handleUserInput} disabled={currentPlayer !== 'user'} />
         
         <div className={Gs.circleCenter}>
+          {/* D4_T2 ---> */}
           {!isSmallScreen && (
             <div className={Gs.scores}>
               <div className={Gs.score}>
@@ -143,6 +146,7 @@ function App() {
               </div>
             </div>
           )}
+          {/* <--- */}
           {currentPlayer === null ? (
             <p>LET'S PLAY</p>
           ) : (
