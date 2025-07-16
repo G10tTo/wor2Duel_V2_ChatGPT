@@ -29,7 +29,7 @@ function App() {
     const valid = await isValidWord(word);
     const round = { word, winner, valid };
     setRounds(prev => [...prev, round]);
-    setLastCompletedWord(round); // ✅ salva sempre la parola
+    setLastCompletedWord(round);
   };
 
   const startNewRound = () => {
@@ -115,22 +115,21 @@ function App() {
 
   return (
     <div className={Gs.App}>
-
+      {isSmallScreen && (
+        <div className={Gs.scores}>
+          <div className={Gs.score}>
+            <p>Player:</p>
+            <p>{score.user}</p>
+          </div>
+          <div className={Gs.score}>
+            <p>AI:</p>
+            <p>{score.ai}</p>
+          </div>
+        </div>
+      )}
       <div className={Gs.circleContainer}>
         <LetterButtons onClick={handleUserInput} disabled={currentPlayer !== 'user'} />
-        {isSmallScreen && (
-          <div className={Gs.scores}>
-            <div className={Gs.score}>
-              <p>Player:</p>
-              <p>{score.user}</p>
-            </div>
-            <div className={Gs.score}>
-              <p>AI:</p>
-              <p>{score.ai}</p>
-            </div>
-          </div>
-        )}
-
+        
         <div className={Gs.circleCenter}>
           {!isSmallScreen && (
             <div className={Gs.scores}>

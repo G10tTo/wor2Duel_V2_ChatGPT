@@ -1,9 +1,11 @@
 .App {
   max-width: 500px;
-  margin: calc((84vh - 500px) / 2) auto;
+  margin: calc((84vh - 650px) / 2) auto;
   margin-bottom: 30px;
   justify-content: center;
   background-color: transparent;
+
+  padding: 10px;
 }
 
 .circleCenter {
@@ -121,10 +123,16 @@
   
 }
 
+
+/* D4_T1 
+---> */
 @media (max-width: 535px) {
   .App {
-    margin: 20px auto;
-    max-width: 320px;
+    margin: 10px auto;
+    margin-top: 30px;
+    max-width: 300px;
+    padding: 10px;
+    min-width: fit-content;
   }
 
   .circleContainer {
@@ -152,11 +160,12 @@
   }
 
   .results button {
-    width: 100px;
+    width: 105px;
     height: 30px;
     font-size: 12px !important;
   }
-}
+}/*
+<--- */
   
 
 @media (max-height: 710px) {

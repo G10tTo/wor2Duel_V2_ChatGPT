@@ -51,6 +51,8 @@
   cursor: not-allowed;
 }
 
+/* D4_T1 
+---> */
 @media (max-width: 535px) {
   .letterButtons button {
     width: 30px;
@@ -58,4 +60,5 @@
     line-height: 30px;
     font-size: 16px;
   }
-}
+}/*
+<--- */
