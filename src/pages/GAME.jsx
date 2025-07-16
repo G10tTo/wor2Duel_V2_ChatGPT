@@ -148,6 +148,8 @@ function App() {
         </div>
       )}
       {/* <--- */}
+
+      {/* D4_T5 ---> */}
       <div
         className={Gs.circleContainer}
         style={{
@@ -160,6 +162,7 @@ function App() {
           }`,
         }}
       >
+      {/* <--- */}
         <LetterButtons onClick={handleUserInput} disabled={currentPlayer !== 'user'} />
         
         <div className={Gs.circleCenter}>
