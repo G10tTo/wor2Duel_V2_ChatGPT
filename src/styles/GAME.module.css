@@ -30,6 +30,8 @@
 
   border-radius: 50%;
   box-shadow: 0 0 15px rgb(0, 91, 203);
+  
+  transition: box-shadow 0.25s ease-in-out;
 }
 
 
