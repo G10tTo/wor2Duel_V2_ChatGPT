@@ -18,14 +18,15 @@ const LetterButtons = ({ onClick, disabled }) => {
         onClick(letter);
         const idx = alphabet.indexOf(letter);
         if (idx !== -1) {
-          buttonRefs.current[idx]?.focus();
+          const btn = document.getElementById(`letter-${idx}`);
+          btn?.focus();
         }
       }
     };
 
     window.addEventListener('keydown', handleGlobalKeyDown);
     return () => window.removeEventListener('keydown', handleGlobalKeyDown);
-  }, [onClick]);
+  }, [onClick, alphabet]);
   /* <--- */
 
   return (
@@ -39,6 +40,7 @@ const LetterButtons = ({ onClick, disabled }) => {
         return (
           <button
             key={letter}
+            id={`letter-${index}`}
             onClick={() => onClick(letter)}
             disabled={disabled}
             style={{ left: `${x}px`, top: `${y}px` }}
