@@ -19,6 +19,17 @@ function App() {
 
   const turnTimer = useRef(null);
 
+  const resetGame = () => {
+    clearTimeout(turnTimer.current);
+    setSequence('');
+    setCurrentPlayer(null);
+    setScore({ user: 0, ai: 0 });
+    setRounds([]);
+    setShowRules(false);
+    setShowResults(false);
+    setLastCompletedWord(null);
+  };
+
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 535);
     window.addEventListener('resize', handleResize);
@@ -38,6 +49,12 @@ function App() {
     const startingPlayer = Math.random() < 0.5 ? 'user' : 'ai';
     setCurrentPlayer(startingPlayer);
   };
+
+  useEffect(() => {
+    const handler = () => resetGame();
+    window.addEventListener('restartGame', handler);
+    return () => window.removeEventListener('restartGame', handler);
+  }, []);
 
   useEffect(() => {
     if (currentPlayer === 'ai') {
