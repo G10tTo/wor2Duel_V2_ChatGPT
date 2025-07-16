@@ -148,7 +148,18 @@ function App() {
         </div>
       )}
       {/* <--- */}
-      <div className={Gs.circleContainer}>
+      <div
+        className={Gs.circleContainer}
+        style={{
+          boxShadow: `0 0 15px ${
+            currentPlayer === 'ai'
+              ? 'red'
+              : currentPlayer === 'user'
+              ? 'green'
+              : 'rgb(0, 91, 203)'
+          }`,
+        }}
+      >
         <LetterButtons onClick={handleUserInput} disabled={currentPlayer !== 'user'} />
         
         <div className={Gs.circleCenter}>
