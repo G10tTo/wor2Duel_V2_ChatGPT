@@ -19,6 +19,7 @@ function App() {
 
   const turnTimer = useRef(null);
 
+  /* D4_T4 ---> */
   const resetGame = () => {
     clearTimeout(turnTimer.current);
     setSequence('');
@@ -29,6 +30,7 @@ function App() {
     setShowResults(false);
     setLastCompletedWord(null);
   };
+  /* <--- */
 
   useEffect(() => {
     const handleResize = () => setIsSmallScreen(window.innerWidth < 535);

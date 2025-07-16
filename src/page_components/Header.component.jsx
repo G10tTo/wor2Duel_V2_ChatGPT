@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header className={Hs.header}>
       <h1>WOR(2D)UEL</h1>
-      <button className={Hs.restart} onClick={restart}>Restart Game</button>
+      <button className={Hs.restart} onClick={restart}>Restart</button>
     </header>
   );
 };
