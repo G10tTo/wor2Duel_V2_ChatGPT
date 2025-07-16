@@ -2,12 +2,17 @@ import RTs from '../styles/RoundTable.module.css';
 import Rs from '../styles/Rules.module.css';
 
 const RoundTable = ({ rounds, onClose }) => {
+  const scrollNeeded = rounds.length > 10;
   return (
     <div className={Rs.rulesOverlay}>
       <div className={Rs.rulesBox}>
         <button className={Rs.closeButton} onClick={onClose}>✕</button>
         <h2>Round's Results</h2>
-        <div className={RTs.roundTableContainer}>
+        <div
+          className={`${RTs.roundTableContainer} ${
+            scrollNeeded ? RTs.scrollable : ''
+          }`}
+        >
           <table className={RTs.roundTable}>
             <thead>
               <tr>

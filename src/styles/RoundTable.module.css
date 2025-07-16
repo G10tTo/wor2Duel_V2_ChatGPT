@@ -2,6 +2,11 @@
   margin-top: 2rem;
 }
 
+.scrollable {
+  max-height: 400px;
+  overflow-y: auto;
+}
+
 .roundTable {
   width: 100%;
   border-collapse: collapse;
