@@ -43,3 +43,42 @@
       background-color: #ebedfd !important;
   }
 }
+
+/* container for restart and theme toggle */
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
+.themeToggle {
+  padding: 5px 10px;
+  margin: 5px 15px 0 15px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+  font-family: monospace !important;
+}
+
+.themeToggle:hover {
+  border-color: #646cff;
+}
+
+:root[data-theme="light"] .header {
+  background-color: #ebedfd !important;
+}
+
+:root[data-theme="light"] .restart,
+:root[data-theme="light"] .themeToggle {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+:root[data-theme="light"] .restart:hover,
+:root[data-theme="light"] .themeToggle:hover {
+  border: 1px solid #646cff;
+  color: #646cff;
+}
+

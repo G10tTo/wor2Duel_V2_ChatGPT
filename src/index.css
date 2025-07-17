@@ -3,10 +3,10 @@
   font-weight: 400;
 
   color-scheme: light dark;
-
+/*
   color: rgb(255, 255, 255);
   background-color: #070613;
-  
+  */
 }
 
 body{
@@ -16,10 +16,20 @@ body{
   margin: 0;
   padding: 0;
 }
-
+/*
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     color: #213547;
     background-color: #f6f6ff;
   }
+}
+*/
+:root[data-theme="dark"] {
+  color: rgb(255, 255, 255);
+  background-color: #070613;
+}
+
+:root[data-theme="light"] {
+  color: #213547;
+  background-color: #f6f6ff;
 }

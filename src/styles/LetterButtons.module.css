@@ -31,7 +31,8 @@
   transform: translate(-50%, -50%);
   pointer-events: auto;
   user-select: none;
-  transition: border-color 0.25s;
+  transition: border-color 0.25s ease-in-out;
+  transition: color 0.25 ease-in-out;
 
   cursor: pointer;
 }
@@ -62,3 +63,13 @@
   }
 }/*
 <--- */
+
+:root[data-theme="light"] .letterButtons button{
+  color: black;
+}
+
+:root[data-theme="light"] .letterButtons button:disabled {
+  background-color: transparent;
+  opacity: 0.5;
+  cursor: not-allowed;
+}

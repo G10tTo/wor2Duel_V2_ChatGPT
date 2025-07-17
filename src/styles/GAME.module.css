@@ -175,3 +175,17 @@
     margin: 20px auto;
   }
 }
+
+
+:root[data-theme="light"] .controls button,
+:root[data-theme="light"] .results button {
+  background-color: transparent;
+  color: #000000;
+  border: 1px solid #000000;
+}
+
+:root[data-theme="light"] .controls button:hover,
+:root[data-theme="light"] .results button:hover {
+  color: #646cff;
+  border: 1px solid #646cff;
+}

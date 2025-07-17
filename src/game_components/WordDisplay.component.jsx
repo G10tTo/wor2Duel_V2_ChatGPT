@@ -17,7 +17,7 @@ const WordDisplay = ({ sequence, lastCompletedWord, currentPlayer }) => {
     <h2 style={{ letterSpacing: '0.3em', color }}>
       {displayText}
       {roundFinished && lastCompletedWord && !lastCompletedWord.valid && (
-        <em style={{ fontSize: '0.6em', color: '#aaa', marginLeft: '0.5em' }}>
+        <em style={{ letterSpacing: '0em', fontSize: '0.6em', color: '#aaa', marginLeft: '0.5em' }}>
           (invalid)
         </em>
       )}
