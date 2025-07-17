@@ -28,6 +28,7 @@
   border-radius: 8px;
   border: 1px solid transparent;
   background-color: #1a1a1a;
+  color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s, color 0.25s;
   font-family: monospace !important;
@@ -38,12 +39,16 @@
 }/* 
 <--- */
 
+
+
+/* D4_T7 ---> */
+/*
 @media (prefers-color-scheme: light) {
   .header {
       background-color: #ebedfd !important;
   }
 }
-
+*/
 /* container for restart and theme toggle */
 .controls {
   display: flex;
@@ -56,6 +61,7 @@
   border-radius: 8px;
   border: 1px solid transparent;
   background-color: #1a1a1a;
+  color: #ffffff;
   cursor: pointer;
   transition: border-color 0.25s, color 0.25s;
   font-family: monospace !important;
@@ -80,5 +86,5 @@
 :root[data-theme="light"] .themeToggle:hover {
   border: 1px solid #646cff;
   color: #646cff;
-}
-
+}/* 
+<--- */

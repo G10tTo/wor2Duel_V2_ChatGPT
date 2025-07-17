@@ -83,6 +83,8 @@
   border-radius: 8px;
   border: 1px solid transparent;
   background-color: #1a1a1a;
+  color: #ffffff;
+
   cursor: pointer;
   transition: border-color 0.25s;
   transition: color 0.25s;
@@ -105,24 +107,13 @@
   border: 1px solid transparent;
 
   background-color: #1a1a1a;
+  color: #ffffff;
+
   cursor: pointer;
   
 
   font-size: 15px !important;
   font-family: monospace !important;
-}
-
-
-@media (prefers-color-scheme: light) {
-  .controls button, .results button {
-    background-color: #ffffff;
-    border: 1px solid #000000;
-  }
-
-  .controls button:hover, .results button:hover {
-    color: #646cff;
-  }
-  
 }
 
 
@@ -176,7 +167,19 @@
   }
 }
 
+/* D4_T7 ---> */
+/*
+@media (prefers-color-scheme: light) {
+  .controls button, .results button {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+  }
 
+  .controls button:hover, .results button:hover {
+    color: #646cff;
+  }
+}
+*/
 :root[data-theme="light"] .controls button,
 :root[data-theme="light"] .results button {
   background-color: transparent;
@@ -188,4 +191,5 @@
 :root[data-theme="light"] .results button:hover {
   color: #646cff;
   border: 1px solid #646cff;
-}
+}/*
+<--- */

@@ -1,9 +1,11 @@
 import Hs from '../styles/Header.module.css';
 
 const Header = ({ onToggleTheme, theme }) => {
+  
   const restart = () => {
     window.dispatchEvent(new Event('restartGame'));
   };
+
   return (
     <header className={Hs.header}>
       <h1>WOR(2D)UEL</h1>

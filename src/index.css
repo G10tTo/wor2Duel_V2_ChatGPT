@@ -2,11 +2,11 @@
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   font-weight: 400;
 
-  color-scheme: light dark;
 /*
+  color-scheme: light dark;
   color: rgb(255, 255, 255);
   background-color: #070613;
-  */
+*/
 }
 
 body{
@@ -16,6 +16,9 @@ body{
   margin: 0;
   padding: 0;
 }
+
+
+/* D4_T7 ---> */
 /*
 @media (prefers-color-scheme: light) {
   :root:not([data-theme]) {
@@ -32,4 +35,6 @@ body{
 :root[data-theme="light"] {
   color: #213547;
   background-color: #f6f6ff;
-}
+}/* 
+<--- */
+

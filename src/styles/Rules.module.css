@@ -47,8 +47,13 @@
   cursor: pointer;
   border: #ffffff 1px solid;
   border-radius: 8px;
+  color: rgb(255, 255, 255);
+
 }
 
+
+/* D4_T7 ---> */
+/*
 @media (prefers-color-scheme: light) {
   .rulesBox {
     background-color: #ffffff;
@@ -58,11 +63,14 @@
     border: #000000 1px solid;
   }
 }
-
+*/
 :root[data-theme="light"] .rulesBox {
   background-color: #ffffff;
 }
 
 :root[data-theme="light"] .closeButton {
   border: #000000 1px solid;
-}
+  color: rgb(0, 0, 0);
+
+}/*
+<--- */

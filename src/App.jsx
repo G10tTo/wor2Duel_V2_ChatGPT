@@ -7,6 +7,7 @@ import Header from "./page_components/Header.component";
 import Footer from "./page_components/Footer.component";
 
 function App() {
+  /* D4_T7 ---> */
   const [theme, setTheme] = useState(() => {
     const stored = localStorage.getItem('theme');
     if (stored) return stored;
@@ -22,7 +23,9 @@ function App() {
 
   const toggleTheme = () => {
     setTheme((prev) => (prev === 'light' ? 'dark' : 'light'));
-  };
+  };/* 
+  <--- */
+
 
   return (
     <>
