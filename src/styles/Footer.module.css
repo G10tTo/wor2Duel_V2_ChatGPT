@@ -66,7 +66,7 @@ What AI suggested:
 
 What I added:
 */
-@media (min-height: 710px) {
+@media (min-height: 585px) {
   footer {
     position: fixed !important;
     bottom: 0 !important;
