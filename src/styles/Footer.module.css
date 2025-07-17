@@ -82,3 +82,7 @@ What I added:
     background-color: #ebedfd !important;
   }
 }
+
+:root[data-theme="light"] footer {
+  background-color: #ebedfd !important;
+}

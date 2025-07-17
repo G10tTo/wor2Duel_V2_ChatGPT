@@ -58,3 +58,11 @@
     border: #000000 1px solid;
   }
 }
+
+:root[data-theme="light"] .rulesBox {
+  background-color: #ffffff;
+}
+
+:root[data-theme="light"] .closeButton {
+  border: #000000 1px solid;
+}

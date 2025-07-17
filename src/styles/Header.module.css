@@ -13,6 +13,12 @@
   transition: all 0.5s ease !important;
 }
 
+/* container for restart and theme toggle */
+.controls {
+  display: flex;
+  flex-direction: column;
+}
+
 .header h1 {
   background: linear-gradient(45deg, #3300ff, #2db4cf) !important;
   -webkit-background-clip: text !important;
@@ -33,13 +39,43 @@
   font-family: monospace !important;
 }
 
+.themeToggle {
+  padding: 5px 10px;
+  margin: 5px 15px 0 15px;
+  border-radius: 8px;
+  border: 1px solid transparent;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s, color 0.25s;
+  font-family: monospace !important;
+}
+
 .restart:hover {
   border-color: #646cff;
-}/* 
+}
+.themeToggle:hover {
+  border-color: #646cff;
+}/*
 <--- */
 
 @media (prefers-color-scheme: light) {
   .header {
       background-color: #ebedfd !important;
   }
+}
+
+:root[data-theme="light"] .header {
+  background-color: #ebedfd !important;
+}
+
+:root[data-theme="light"] .restart,
+:root[data-theme="light"] .themeToggle {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+  color: #000000;
+}
+
+:root[data-theme="light"] .restart:hover,
+:root[data-theme="light"] .themeToggle:hover {
+  color: #646cff;
 }

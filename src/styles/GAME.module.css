@@ -125,6 +125,17 @@
   
 }
 
+:root[data-theme="light"] .controls button,
+:root[data-theme="light"] .results button {
+  background-color: #ffffff;
+  border: 1px solid #000000;
+}
+
+:root[data-theme="light"] .controls button:hover,
+:root[data-theme="light"] .results button:hover {
+  color: #646cff;
+}
+
 
 /* D4_T1 
 ---> */

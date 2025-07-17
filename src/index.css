@@ -6,7 +6,16 @@
 
   color: rgb(255, 255, 255);
   background-color: #070613;
-  
+}
+
+:root[data-theme="dark"] {
+  color: rgb(255, 255, 255);
+  background-color: #070613;
+}
+
+:root[data-theme="light"] {
+  color: #213547;
+  background-color: #f6f6ff;
 }
 
 body{
@@ -18,7 +27,7 @@ body{
 }
 
 @media (prefers-color-scheme: light) {
-  :root {
+  :root:not([data-theme]) {
     color: #213547;
     background-color: #f6f6ff;
   }
