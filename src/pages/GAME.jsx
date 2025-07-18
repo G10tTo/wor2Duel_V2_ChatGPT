@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from 'react';
+import useScore from '../hooks/useScore';
 import LetterButtons from '../game_components/LetterButtons.component';
 import WordDisplay from '../game_components/WordDisplay.component';
 import RoundTable from '../game_components/RoundTable.component';
@@ -10,7 +11,7 @@ import Gs from '../styles/GAME.module.css';
 function App() {
   const [sequence, setSequence] = useState('');
   const [currentPlayer, setCurrentPlayer] = useState(null); // null till the game starts
-  const [score, setScore] = useState({ user: 0, ai: 0 });
+  const { score, incrementUser, incrementAi, resetScore } = useScore();
   const [isSmallScreen, setIsSmallScreen] = useState(() => window.innerWidth < 535);
   const [rounds, setRounds] = useState([]);
   const [showRules, setShowRules] = useState(false);
@@ -24,7 +25,7 @@ function App() {
     clearTimeout(turnTimer.current);
     setSequence('');
     setCurrentPlayer(null);
-    setScore({ user: 0, ai: 0 });
+    resetScore();
     setRounds([]);
     setShowRules(false);
     setShowResults(false);
@@ -79,7 +80,7 @@ function App() {
     setSequence(newSeq);
 
     if (newSeq.length >= 4 && await isValidWord(newSeq)) {
-      setScore(prev => ({ ...prev, user: prev.user + 1 }));
+      incrementUser();
       registerRound(newSeq, 'user');
       setCurrentPlayer(null); // End of round
       return;
@@ -88,7 +89,7 @@ function App() {
     const possible = await getPossibleWords(newSeq);
     if (possible.length === 0) {
       // if no possible words, AI score 1 point
-      setScore(prev => ({ ...prev, ai: prev.ai + 1 }));
+      incrementAi();
       registerRound(newSeq, 'ai');
       setCurrentPlayer(null);
       return;
@@ -102,7 +103,7 @@ function App() {
     const possible = await getPossibleWords(sequence);
 
     if (possible.length === 0) {
-      setScore(prev => ({ ...prev, user: prev.user + 1 }));
+      incrementUser();
       registerRound(sequence, 'user');
       setCurrentPlayer(null);
       return;
@@ -111,7 +112,7 @@ function App() {
     const nextLetters = possible.map(w => w[sequence.length]).filter(Boolean);
 
     if (nextLetters.length === 0) {
-      setScore(prev => ({ ...prev, user: prev.user + 1 }));
+      incrementUser();
       registerRound(sequence, 'user');
       setCurrentPlayer(null);
       return;
@@ -121,7 +122,7 @@ function App() {
     const newSeq = sequence + nextLetter.toLowerCase();
 
     if (newSeq.length >= 4 && await isValidWord(newSeq)) {
-      setScore(prev => ({ ...prev, ai: prev.ai + 1 }));
+      incrementAi();
       registerRound(newSeq, 'ai');
       setSequence('');
       setCurrentPlayer(null);
