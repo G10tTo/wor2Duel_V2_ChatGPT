@@ -1,4 +1,4 @@
-import nounList from '../assets/valid_nouns_4-10.json';
+import nounList from '../assets/valid_nouns_4-10.json' assert { type: 'json' };
 
 // Verify if a word is valid
 export const isValidWord = async (word) => {
