@@ -1,3 +1,4 @@
+/* D4_T8 --->*/
 import { useState, useCallback } from 'react';
 
 export default function useScore(initialScore = { user: 0, ai: 0 }) {
@@ -16,4 +17,5 @@ export default function useScore(initialScore = { user: 0, ai: 0 }) {
   }, []);
 
   return { score, incrementUser, incrementAi, resetScore };
-}
+}/* 
+<--- */

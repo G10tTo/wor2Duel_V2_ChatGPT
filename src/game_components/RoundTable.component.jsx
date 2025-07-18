@@ -41,7 +41,7 @@ const RoundTable = ({ rounds, onClose }) => {
                       </span>
                     )}
                   </td>
-                  <td>{round.winner === 'user' ? 'User' : 'AI'}</td>
+                  <td>{round.winner === 'user' ? 'Player' : 'AI'}</td>
                 </tr>
               ))}
             </tbody>
