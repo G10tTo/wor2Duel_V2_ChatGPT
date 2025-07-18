@@ -1,3 +1,4 @@
+/* D4_T9 ---> */
 import { test } from 'node:test';
 import assert from 'assert/strict';
 import { getPossibleWords } from './dictionary.js';
@@ -17,3 +18,5 @@ test('getPossibleWords returns empty array when no words match', async () => {
   const words = await getPossibleWords('zzzz');
   assert.deepStrictEqual(words, []);
 });
+/* 
+<--- */
