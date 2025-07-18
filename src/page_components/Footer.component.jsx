@@ -1,3 +1,5 @@
+/* D4_T10 ---> */
+
 // Import CSS module containing scoped footer styles
 import Fs from "../styles/Footer.module.css";
 
@@ -17,3 +19,5 @@ const Footer = () => {
 };
 
 export default Footer;
+
+/* <--- */
