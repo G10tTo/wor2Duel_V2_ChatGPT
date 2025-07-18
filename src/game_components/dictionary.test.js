@@ -18,5 +18,5 @@ test('getPossibleWords returns empty array when no words match', async () => {
   const words = await getPossibleWords('zzzz');
   assert.deepStrictEqual(words, []);
 });
-/* 
+/*
 <--- */
